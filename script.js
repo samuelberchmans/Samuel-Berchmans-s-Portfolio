@@ -225,7 +225,11 @@ cards.forEach(card=>{
     card.addEventListener("mousemove",(e)=>{
 
         const x=e.offsetX;
-
+/* Change cyan to #ffd700 so logo glow matches your gold theme */
+setInterval(()=>{
+    document.querySelector(".logo").style.textShadow=
+    `0 0 ${Math.random()*25}px #ffd700`;
+},500);
         const y=e.offsetY;
 
         card.style.transform=
@@ -253,7 +257,7 @@ setInterval(()=>{
 
     document.querySelector(".logo").style.textShadow=
 
-    `0 0 ${Math.random()*25}px cyan`;
+    `0 0 ${Math.random()*25}px #ffd700`;
 
 },500);
 

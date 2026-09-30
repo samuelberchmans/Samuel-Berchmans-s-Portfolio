@@ -10,13 +10,13 @@
 --card:#111827;
 --card2:#1a2438;
 
---primary:#00e5ff;
---secondary:#7c3aed;
+--primary:#ffd700;
+--secondary:#ffaa00;
 
 --white:#ffffff;
 --text:#cfd8dc;
 
---shadow:0 10px 35px rgba(0,229,255,.15);
+--shadow:0 10px 35px rgba(255,215,0,.15);
 
 }
 
@@ -322,13 +322,13 @@ object-fit:cover;
 
 border-radius:50%;
 
-border:5px solid rgba(0,229,255,.15);
+border:5px solid rgba(255,215,0,.15);
 
 box-shadow:
 
-0 0 30px rgba(0,229,255,.4),
+0 0 30px rgba(255,215,0,.4),
 
-0 0 70px rgba(124,58,237,.25);
+0 0 70px rgba(255,170,0,.25);
 
 transition:.5s;
 
@@ -340,9 +340,9 @@ transform:scale(1.04) rotate(-2deg);
 
 box-shadow:
 
-0 0 45px rgba(0,229,255,.6),
+0 0 45px rgba(255,215,0,.6),
 
-0 0 90px rgba(124,58,237,.45);
+0 0 90px rgba(255,170,0,.45);
 
 }
 
@@ -364,9 +364,9 @@ flex-wrap:wrap;
 
 padding:15px 35px;
 
-background:linear-gradient(135deg,var(--primary),#00bfff);
+background:linear-gradient(135deg,var(--primary),#ffc107);
 
-color:white;
+color:#050816;
 
 border-radius:50px;
 
@@ -567,6 +567,7 @@ justify-content:center;
 }
 
 }
+
 /* ===========================================
 ABOUT SECTION
 =========================================== */
@@ -611,7 +612,7 @@ transition:.4s;
 
 transform:translateY(-8px);
 
-border:1px solid rgba(0,229,255,.3);
+border:1px solid rgba(255,215,0,.3);
 
 }
 
@@ -729,13 +730,13 @@ box-shadow:0 8px 25px rgba(0,0,0,.25);
 
 transform:translateY(-12px);
 
-background:linear-gradient(145deg,#00cfff,#7c3aed);
+background:linear-gradient(145deg,#ffd700,#ffaa00);
 
-color:white;
+color:#050816;
 
 box-shadow:
 
-0 10px 30px rgba(0,229,255,.35);
+0 10px 30px rgba(255,215,0,.35);
 
 }
 
@@ -827,7 +828,7 @@ border-color:var(--primary);
 
 box-shadow:
 
-0 10px 30px rgba(0,229,255,.25);
+0 10px 30px rgba(255,215,0,.25);
 
 }
 
@@ -845,66 +846,15 @@ animation:fadeUp .9s ease;
 }
 
 /* ===========================================
-RESPONSIVE
-=========================================== */
-
-@media(max-width:768px){
-
-#about p{
-
-padding:25px;
-
-font-size:16px;
-
-}
-
-.skills-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.timeline{
-
-padding-left:20px;
-
-}
-
-.timeline div{
-
-margin-left:25px;
-
-padding:20px;
-
-font-size:15px;
-
-}
-
-.timeline div::before{
-
-left:-34px;
-
-}
-
-}
-
-@media(max-width:500px){
-
-.skills-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-/* ===========================================
 PROJECT SECTION
 =========================================== */
 
 .project-grid{
 
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
 gap:35px;
 
 }
@@ -931,7 +881,7 @@ transform:translateY(-15px);
 
 border-color:var(--primary);
 
-box-shadow:0 20px 45px rgba(0,229,255,.18);
+box-shadow:0 20px 45px rgba(255,215,0,.18);
 
 }
 
@@ -1015,7 +965,7 @@ gap:30px;
 
 }
 
-.certificate-grid div{
+.certificate-grid a.cert-link{
 
 background:linear-gradient(145deg,#111827,#1b2845);
 
@@ -1037,82 +987,117 @@ font-size:18px;
 
 font-weight:600;
 
+color:var(--white);
+
+text-decoration:none;
+
+display:block;
+
 }
 
-.certificate-grid div:hover{
+.certificate-grid a.cert-link:hover{
 
-background:linear-gradient(145deg,#00cfff,#7c3aed);
+background:linear-gradient(145deg,#ffd700,#ffaa00);
 
 transform:translateY(-12px);
 
-color:white;
+color:#050816;
+
+box-shadow:0 10px 30px rgba(255,215,0,.35);
 
 }
 
-/*================ GitHub ================*/
+/* ===========================================
+GITHUB ANALYTICS
+=========================================== */
 
 .github-container{
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:25px;
+
+max-width:1100px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:25px;
+
 }
 
 .profile-card{
-    width:100%;
-    border-radius:15px;
+
+width:100%;
+
+border-radius:15px;
+
 }
 
 .github-bottom{
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    gap:25px;
-    flex-wrap:wrap;
+
+display:flex;
+
+justify-content:center;
+
+align-items:flex-start;
+
+gap:25px;
+
+flex-wrap:wrap;
+
 }
 
 .github-card{
-    width:500px;
-    max-width:100%;
-    border-radius:15px;
-    transition:.3s;
-    box-shadow:0 0 15px rgba(0,255,255,.15);
+
+width:500px;
+
+max-width:100%;
+
+border-radius:15px;
+
+transition:.3s;
+
+box-shadow:0 0 15px rgba(255,215,0,.15);
+
 }
 
 .github-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 25px cyan;
+
+transform:translateY(-8px);
+
+box-shadow:0 0 25px #ffd700;
+
 }
 
 .github-btn{
-    text-decoration:none;
-    background:#00e5ff;
-    color:#08111f;
-    padding:14px 30px;
-    border-radius:40px;
-    font-weight:700;
-    font-size:18px;
-    transition:.3s;
+
+text-decoration:none;
+
+background:#ffd700;
+
+color:#08111f;
+
+padding:14px 30px;
+
+border-radius:40px;
+
+font-weight:700;
+
+font-size:18px;
+
+transition:.3s;
+
 }
 
 .github-btn:hover{
-    background:#fff;
-    color:#000;
-    box-shadow:0 0 20px cyan;
-}
 
-@media(max-width:768px){
+background:#fff;
 
-.github-bottom{
-    flex-direction:column;
-    align-items:center;
-}
+color:#000;
 
-.github-card{
-    width:100%;
-}
+box-shadow:0 0 20px #ffd700;
 
 }
 
@@ -1128,9 +1113,9 @@ text-align:center;
 
 #contact p{
 
-font-size:20px;
+font-size:1.4rem;
 
-margin:18px 0;
+margin:20px 0;
 
 color:var(--text);
 
@@ -1143,6 +1128,24 @@ transition:.3s;
 color:var(--primary);
 
 transform:translateX(8px);
+
+}
+
+#contact a{
+
+color:#ffd700;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+#contact a:hover{
+
+color:white;
+
+text-shadow:0 0 12px #ffd700;
 
 }
 
@@ -1186,19 +1189,19 @@ background:linear-gradient(var(--primary),var(--secondary));
 
 border-radius:50%;
 
-display:flex;
+display:none;
 
 justify-content:center;
 
 align-items:center;
 
-color:white;
+color:#050816;
 
 font-size:22px;
 
 cursor:pointer;
 
-box-shadow:0 10px 25px rgba(0,229,255,.25);
+box-shadow:0 10px 25px rgba(255,215,0,.25);
 
 transition:.4s;
 
@@ -1213,7 +1216,7 @@ transform:translateY(-8px) scale(1.08);
 }
 
 /* ===========================================
-SELECTION
+SELECTION & NAV ACTIVE
 =========================================== */
 
 ::selection{
@@ -1224,8 +1227,32 @@ color:#050816;
 
 }
 
+nav a.active{
+
+color:#ffd700;
+
+}
+
+section{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+section.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
 /* ===========================================
-RESPONSIVE
+RESPONSIVE MEDIA QUERIES
 =========================================== */
 
 @media(max-width:992px){
@@ -1245,6 +1272,60 @@ grid-template-columns:1fr;
 #contact p{
 
 font-size:18px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#about p{
+
+padding:25px;
+
+font-size:16px;
+
+}
+
+.skills-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.timeline{
+
+padding-left:20px;
+
+}
+
+.timeline div{
+
+margin-left:25px;
+
+padding:20px;
+
+font-size:15px;
+
+}
+
+.timeline div::before{
+
+left:-34px;
+
+}
+
+.github-bottom{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.github-card{
+
+width:100%;
 
 }
 
@@ -1271,47 +1352,13 @@ padding:90px 7%;
 }
 
 }
-section{
 
-opacity:0;
+@media(max-width:500px){
 
-transform:translateY(60px);
+.skills-grid{
 
-transition:1s;
-
-}
-
-section.active{
-
-opacity:1;
-
-transform:translateY(0);
+grid-template-columns:1fr;
 
 }
 
-nav a.active{
-
-color:#00e5ff;
-
-}
-
-#topBtn{
-
-display:none;
-
-}
-#contact p{
-    font-size:1.4rem;
-    margin:20px 0;
-}
-
-#contact a{
-    color:#00e5ff;
-    text-decoration:none;
-    transition:.3s;
-}
-
-#contact a:hover{
-    color:white;
-    text-shadow:0 0 12px cyan;
 }
